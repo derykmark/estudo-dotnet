@@ -1,0 +1,3 @@
+C:\Users\0030481721008\Wachlist\obj\Debug\netcoreapp2.0\Wachlist.csproj.CoreCompileInputs.cache
+C:\Users\0030481721008\Wachlist\obj\Debug\netcoreapp2.0\Wachlist.AssemblyInfoInputs.cache
+C:\Users\0030481721008\Wachlist\obj\Debug\netcoreapp2.0\Wachlist.AssemblyInfo.cs

@@ -27,7 +27,7 @@ namespace WachList.Models.Mappings
             builder
                 .HasMany(u => u.Movies)
                 .WithOne(m => m.User)
-                .HasForeingKey(m => m.UserId)
+                .HasForeingKey(m => m.UserId);
         }
     }
 }

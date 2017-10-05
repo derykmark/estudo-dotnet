@@ -1,26 +1,15 @@
+using Microsoft.EntityFrameworkCore;
 
-
-
-
-
-publi class MovieContext : DbContext
+namespace Watchlist.Models
+{
+    public class MovieContext : DbContext
     {
-        public Dbset<User> User{ get, set; }
-        public Dbset<User> User{ get, set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Movie> Movies { get; set; }
 
-        public MovieContext(DbContextOptions<MovieContext>)
+        public MovieContext(DbContextOptions<MovieContext> options)
             :base(options)
-            {
-
-            }
-        protected override void OnModelCreationg(ModelBuilder ModelBuilder)
         {
-            base.OnmodelCreating(ModelBuilder);
-
-            new UserMapping(modelBuilder.Entity<User>());
-            new UserMapping(modelBuilder.Entity<User>());
-
         }
-        
-
     }
+}

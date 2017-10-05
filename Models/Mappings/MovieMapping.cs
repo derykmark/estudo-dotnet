@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace WachList.Models.Mappings()
+namespace WachList.Models.Mappings
 {
-    public class MovieMapping ()
+    public class MovieMapping 
     {
         public MovieMapping (EntityTypeBuilder<Movie> builder)
         {
@@ -17,11 +17,11 @@ namespace WachList.Models.Mappings()
             builder
                 .Property(m => m.Id)
                 .IsRequired()
-                .HasMaxLenght(255):
+                .HasMaxLenght(255);
             
             builder
                 .Property(m => m.Image)
-                .IsRequired(255)
+                .IsRequired(255);
             
             
             builder
@@ -31,9 +31,9 @@ namespace WachList.Models.Mappings()
 
             
             builder
-                .Property(m => m.Movies)
-                .IsRequired()
-            
+              .HasOne(m => m.Movies)
+              .WithMany(u => u.User)
+              .HasForeingKey(u => u.User.Id);
                 
         }
     }
